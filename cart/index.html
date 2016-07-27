@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <base href="/"> -->
+    <title>Loktra Shopping Store</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.2.28/angular-route.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/ngstorage/0.3.6/ngStorage.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="assets/styles.css">
+  </head>
+  <body>
+
+    <div ng-app="myApp" >
+
+      <nav-bar ng-controller="navbarController"></nav-bar>
+      <div ng-view></div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.js"></script>
+    <script src="assets/js/menuUpdateMobileView.js"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/app.routes/app.routes.js"></script>
+    <script src="app/app.routes/currentRoute.factory.js"></script>
+    <script src="app/app.myData/myData.factory.js"></script>
+    <script src="app/navbar/navbarDirective.js"></script>
+    <script src="app/navbar/navbarController.js"></script>
+    <script src="app/gallery/galleryController.js"></script>
+    <script src="app/product/productController.js"></script>
+    <script src="app/shoppingCart/myCart.factory.js"></script>
+    <script src="app/shoppingCart/shoppingCartController.js"></script>
+    <script src="app/shoppingCart/shoppingCartServices.js"></script>
+  </body>
+</html>

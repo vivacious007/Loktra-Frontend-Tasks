@@ -1,0 +1,218 @@
+
+.table, th, td {
+  text-align:center;
+}
+
+.table tbody tr td,
+.table tbody tr th {
+  vertical-align:middle;
+}
+
+.form-control {
+  max-height:30px;
+}
+.input-group {
+  width: 125px;
+  margin: auto;
+}
+input {
+  text-align: center;
+}
+.badge,
+.input-group-addon {
+  cursor:pointer;
+}
+.badge{
+  background-color:#C55050;
+}
+.row{
+  margin:0;
+  text-align: center;
+}
+.thumbnail {
+  width: 20%;
+  min-width: 200px;
+  margin: 20px 20px;
+}
+.table-responsive {
+  border:none;
+}
+body {
+  background-color: #F5F5F5;
+  font-family: 'Oxygen', sans-serif;
+}
+.navbar-default,
+.navbar-collapse {
+  border:none;
+  background-color: black;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.navbar-default .navbar-collapse {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.5); 
+}
+
+.navbar-default .navbar-nav li a,
+.navbar-default .navbar-header a {
+  color: white;
+}
+
+.navbar-default .navbar-nav li a:hover {
+  color: black;
+}
+.navbar-default .navbar-nav li:hover {
+  background-color: white;
+}
+.navbar-nav > li > a, .navbar-brand {
+    padding-top:5px !important; padding-bottom:0 !important;
+    height: 30px;
+}
+.navbar {
+  min-height:30px !important;
+  border-radius: 0;
+}
+nav{
+  z-index: 1;
+}
+
+nav button {
+  padding: 0;
+}
+.navbar-default .navbar-toggle{
+  padding: 5px;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.glyphicon-menu-hamburger{
+  margin: 5px;
+  color: white;
+}
+header {
+  top:110px;
+  bottom: 0;
+  position: absolute;
+  left:0;
+  right: 0;
+  background-image: url('images/main.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position-x: 25%; 
+  background-position-y: 50%; 
+}
+
+.shop-brand {
+  text-align: center;
+  height: 100px;
+  font-size: 60px;
+  text-transform: uppercase;
+}
+.shop-brand a {
+  text-decoration: none;
+  color: black;
+  outline: none;
+}
+
+.navbar-default .navbar-brand:active,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:hover {
+  color: white;
+  background-color: transparent;
+  outline: none;
+}
+button{
+  outline: none;
+}
+button:active{
+  outline: none;
+}
+a {
+  color: black;
+  outline : none;
+}
+a:hover{
+  text-decoration: none;
+}
+a:active, a:focus { 
+ outline: none; 
+ ie-dummy: expression(this.hideFocus=true);
+}
+.navbar .navbar-brand{
+  display: none;
+}
+.breadcrumb {
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  background-color: lightgrey;
+}
+.breadcrumb>li+li:before{
+  color: gray;
+}
+.alerts {
+  width:80%;
+  margin:auto;
+}
+.alert{
+  margin: 20px 0;
+  text-align:center;
+}
+.product-img {
+  max-height:500px;
+  margin:20px auto;
+}
+.product-descr {
+  margin:auto;
+}
+.cart-btn {
+  margin: 20px;
+  background-color: black;
+  color: white;
+  outline: none;
+}
+.cart-btn:hover{
+  background-color: grey;
+}
+.prod-gallery {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.page-header{
+  text-align: center;
+}
+.table {
+  width:90%;
+  margin:auto;
+}
+.table img {
+  height: 100px;
+}
+.input-group .form-control {
+  z-index: 1;
+}
+@media only screen and (max-width: 800px){
+  .showOnly{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .navbar .navbar-brand{
+    display: block;
+    margin: 11px;
+    padding: 5px !important;
+    font-weight: bold;
+  }
+  .navbar {
+    z-index: 2;
+  }
+  .shop-brand {
+    display: none;
+  }
+  header {
+    top: 0px;
+  }
+  body {
+    padding-top: 70px;  
+  }
+}

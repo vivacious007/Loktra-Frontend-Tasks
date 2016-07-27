@@ -1,0 +1,19 @@
+
+
+<div class="container-fluid">
+  
+  <div class="prod-gallery">
+    
+    <div class="thumbnail" ng-repeat="x in myData | orderBy: 'price'" ng-if="x.type == typo || isActive('/viewAll')">
+      <a href="#/{{x.type}}/{{x.id}}">
+        <img ng-src="assets/images/{{x.type}}/{{x.image}}">
+        <div class="caption">
+          <h5>{{x.title}}</h5>
+          <p>{{x.price | currency}}</p>
+        </div>
+      </a>
+    </div>
+
+  </div>
+  
+</div>

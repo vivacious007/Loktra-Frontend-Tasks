@@ -1,0 +1,46 @@
+
+<div ng-show="cart.length == 0" class="page-header">
+  <h1>There are no items in your cart.</h1>
+</div>
+
+<div class="table-responsive" ng-show="cart.length"> 
+  <!--  -->
+  <table class="table">
+    <tr>
+      <th></th>
+      <th class="showOnly"></th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th><button ng-click="emptyCart()" type="button" class="btn btn-default">Empty Cart</button></th>
+    </tr>
+    <tr ng-repeat="x in cart">
+      <td>
+        <a href="#/{{x.productType}}/{{x.productId}}"><img ng-src="assets/images/{{x.productType}}/{{x.productImage}}"></a>
+      </td>
+      <td class="showOnly">
+        <a href="#/{{x.productType}}/{{x.productId}}">{{x.productName}}</a>
+      </td>
+      <td>
+        <div class="input-group">
+          <span class="input-group-addon" ng-click="decrementQuantity($index)">-</span>
+          <input type="text" value="{{x.productQuantity}}" ng-model="x.productQuantity" class="form-control">
+          <span class="input-group-addon" ng-click="incrementQuantity($index)">+</span>
+        </div>
+      </td>
+      <td>
+        {{x.productPrice * x.productQuantity | currency}}
+      </td>
+      <td>
+        <span ng-click="deleteOrder($index)" class="badge"><span class="glyphicon glyphicon-remove"></span></span>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><h2>Total to pay:</h2></td>
+      <td></td>
+      <td><h2>{{getTotal() | currency}}</h2></td>
+      <td></td>
+    </tr>
+  </table>
+</div>
+

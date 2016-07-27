@@ -1,0 +1,42 @@
+
+
+<div ng-controller="shoppingCartController">
+
+  <ol class="breadcrumb">
+    <li><a href="#/">Home</a></li>
+    <li><a href="#/viewAll">View All</a></li>
+    <li><a href="#/{{itemType}}">{{itemType}} </a></li>
+    <li class="active">{{product.title}}</li>
+  </ol>
+
+<div class="alerts">
+  <div class="alert alert-success" role="alert" ng-show="added">
+    <h4>Item added to cart.</h4>
+    <a href="#/shoppingCart" class="alert-link"><h3>Go to my cart.</h3></a>
+  </div>
+
+  <div class="alert alert-warning" role="alert" ng-show="duplicate">
+    <h4>Item already in cart.</h4>
+    <a href="#/shoppingCart" class="alert-link"><h3>Go to my cart.</h3></a>
+  </div>
+
+</div>
+
+
+  <div class="row">
+    <div class="col-md-5"> 
+      <img ng-src="assets/images/{{product.type}}/{{product.image}}" class="img-responsive product-img">
+    </div>
+
+    <div class="col-md-6 product-descr">
+      <div>
+        <h2>{{product.title}}</h2></br>
+        <p>Best product available at best prices. Quality is assured . Real branded products with bills.</p>
+        <h4>{{product.price | currency}}</h4>
+        <button class="btn btn-secondary cart-btn" type="button" ng-click="addCart(product)">Add to Cart</button>   
+      </div>
+    </div>
+
+  </div>
+
+</div>

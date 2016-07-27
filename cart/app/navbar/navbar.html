@@ -1,0 +1,30 @@
+
+  <div class="shop-brand"><a href="#/">My Shop</a></div>
+        
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+          <span class="glyphicon glyphicon-menu-hamburger"></span>
+        </button>
+        <a class="navbar-brand" href="#/">Loktra Shopping Cart</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          
+          <li ng-class="{ active: isActive('/blouses')}"><a href="#/blouses" class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.in">Shirts</a></li>
+          <li ng-class="{ active: isActive('/dresses')}"><a href="#/dresses" class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.in">Dresses</a></li>
+          <li ng-class="{ active: isActive('/tshirts')}"><a href="#/tshirts" class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.in">T-Shirts</a></li>
+          <li ng-class="{ active: isActive('/viewAll')}"><a href="#/viewAll" class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.in">All Products</a></li>
+          
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right" >
+          <li ng-class="{ active: isActive('/shoppingCart')}"><a href="#/shoppingCart"  data-toggle="collapse" data-target=".navbar-collapse.in"><span class="glyphicon glyphicon-shopping-cart"></span> <span ng-show="itemsInCart()>0" class="badge">{{itemsInCart()}}</span></a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
