@@ -5,8 +5,8 @@
 <meta charset="utf-8">
 
 <link href="css/bootstrap.min.css" rel="stylesheet">
-<script src="js/jquery-1.12.2.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="jquery-1.12.2.min.js"></script>
+
 <script type="text/javascript">
 	function myfunc(){
 	alert("SAVED");
@@ -31,6 +31,15 @@
     height: 65px;
     border-radius: 10px;
 	}	
+	.arrow-down {
+  width: 0; 
+  height: 5px; 
+  float:right;
+  margin-right:20px;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 22px solid #424242;
+}
 .donationbody span{
 	color: red;
 }
@@ -125,15 +134,10 @@ progress::-webkit-progress-value {
 		-webkit-linear-gradient(45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%),
 		-webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
 		-webkit-linear-gradient(left, #ba7448, #c4672d);
-	
-	/* Looks great, now animating it */
 	background-size: 25px 14px, 100% 100%, 100% 100%;
 	-webkit-animation: move 5s linear 0 infinite;
 }
-@-webkit-keyframes move {
-	0% {background-position: 0px 0px, 0 0, 0 0}
-	100% {background-position: -100px 0px, 0 0, 0 0}
-}
+
 </style>
 <body>
 	<center>
@@ -141,11 +145,12 @@ progress::-webkit-progress-value {
 		<div class="col-md-10">
 			<div class="contentbody container">
 				<div class="row bodyhead ">
-					<h3>$167 still needed for this project</h3>
+					<h3 id="value">$167 still needed for this project</h3>
+					<div class="arrow-down"></div>
 				</div>
 				<div class="row donationcontent">
 					<div class="progress">
-  						<progress value="833" max="1000" id="p1" style=""></progress>
+  						<progress value="833" max="1000" id="p1"></progress>
 					</div>
 					<div class="row">
 						<div class="donationbody">
@@ -173,8 +178,15 @@ progress::-webkit-progress-value {
 		</div>
 		<script type="text/javascript"> 
 		function incr() { 
-		var v1=document.getElementById('p1').value;
-		document.getElementById("p1").value= v1 + 10;
+		var y = 167;
+		var x = parseInt(document.getElementById("donateval").value);
+		document.getElementById("value").innerHTML ="$"+(y-x)+" still needed for this project";
+		var v1=parseInt(document.getElementById('p1').value);
+		var z = (v1+x);
+		console.log(z);
+		 document.getElementsByTagName("progress")[0].setAttribute("value",z);
+		
+			
 		}
 		</script> 
 		</center>
