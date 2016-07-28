@@ -5,4 +5,4 @@ Task list with links :
 
 == Donation Box Task - https://vivacious007.github.io/Loktra-Frontend-Tasks/donation/
 
-== Shopping Cart 
+== Shopping Cart ==https://vivacious007.github.io/Loktra-Frontend-Tasks/cart/
