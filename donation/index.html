@@ -20,10 +20,10 @@
 	}
 	.contentbody{
 		width: 90%;
-
 	}
+    
 	.bodyhead{
-    text-align: center;
+    text-align: ;
     color: white;
     background: #424242;
     margin-top:20px;
@@ -113,44 +113,44 @@ border:2px solid #d3d3d3;
 	margin-left:350px;
 	margin-top:-117px;
 }
-progress{
-	width:100%;
-	background-color: #f3f3f3;
-	height:20px;
-	display: block;
-	-webkit-appearance: none;
-	border: none;
+ progress[value] {
+  width: 500px;
+  height: 20px;
 }
-progress::-webkit-progress-bar {
-	background: black;
-	border-radius: 2px;
-	padding: 2px;
-	box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.2);
+progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+   appearance: none;
+   width:100%;
+   height: 20px;
 }
-progress::-webkit-progress-value {
-	border-radius: 1px;
-	box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
-	background:
-		-webkit-linear-gradient(45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%),
-		-webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
-		-webkit-linear-gradient(left, #ba7448, #c4672d);
-	background-size: 25px 14px, 100% 100%, 100% 100%;
-	-webkit-animation: move 5s linear 0 infinite;
+progress[value]::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
 }
-
+progress[value]::-webkit-progress-value {
+    background:orange;
+	border-radius: 2px; 
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+    #value{
+        margin-left: 25%;
+        
+    }
 </style>
 <body>
-	<center>
+	<div id="container">
 	<div class="outer-container container-fluid">
 		<div class="col-md-10">
 			<div class="contentbody container">
 				<div class="row bodyhead ">
-					<h3 id="value">$167 still needed for this project</h3>
+					<h3 id="value">$1000 still needed for this project</h3>
 					<div class="arrow-down"></div>
 				</div>
 				<div class="row donationcontent">
 					<div class="progress">
-  						<progress value="833" max="1000" id="p1"></progress>
+  						<progress value="0" max="1000" id="p1"></progress>
 					</div>
 					<div class="row">
 						<div class="donationbody">
@@ -176,19 +176,27 @@ progress::-webkit-progress-value {
 					</div>
 				</div>
 		</div>
+        </div>
 		<script type="text/javascript"> 
 		function incr() { 
-		var y = 167;
+		var y = 1000;
 		var x = parseInt(document.getElementById("donateval").value);
-		document.getElementById("value").innerHTML ="$"+(y-x)+" still needed for this project";
+            if(x>1000)
+                {
+                    document.getElementById("value").innerHTML = "Project Accomplished";
+                }
+            else{
+            document.getElementById("value").innerHTML ="$"+(y-x)+" still needed for this project";
+            }
 		var v1=parseInt(document.getElementById('p1').value);
 		var z = (v1+x);
 		console.log(z);
+            
 		 document.getElementsByTagName("progress")[0].setAttribute("value",z);
 		
 			
 		}
 		</script> 
-		</center>
+		
 </body>
 </html>
