@@ -24,7 +24,10 @@
       <span class="label label-primary">Genre :</span> {{ details.Genre }}
     </div>
     </p>
-<div class="wishlist" ng-click="wishlist()">wishlist&#10084;</div>
-<div ng-if="details.Response==='False'">
-  No results found.
-</div>
+	<div class="addwish" >
+		<input type="button" value="&#10084;" ng-click="addwish()">
+		{{message}}
+	</div>
+	<div ng-if="details.Response==='False'">
+	No results found.
+	</div>
