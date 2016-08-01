@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Donation Webpage For Loktra</title>
+<meta charset="utf-8">
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<script src="jquery-1.12.2.min.js"></script>
+
+<script type="text/javascript">
+	function myfunc(){
+	alert("SAVED");
+	}
+</script>
+</head>
+<style type="text/css">
+	.outer-container{
+		background-color: white;
+		width: 46%;
+	}
+	.contentbody{
+		width: 90%;
+	}
+    
+	.bodyhead{
+    text-align: ;
+    color: white;
+    background: #424242;
+    margin-top:20px;
+	padding:5px;
+    height: 65px;
+    border-radius: 10px;
+	}	
+	.arrow-down {
+  width: 0; 
+  height: 5px; 
+  float:right;
+  margin-right:20px;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 22px solid #424242;
+}
+.donationbody span{
+	color: red;
+}
+.donationbody{
+	 padding-left: 10%;
+    font-family: serif;
+}
+.donationbody h3{
+	color:black;
+	font-size:1.4em;
+}
+.donationcontent{
+	    border: 2px solid #d3d3d3;
+    margin-top: 15px;
+}
+
+.donationbutton1 {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    background: white;
+    color: #828282;
+    box-shadow: 1px 1px 5px -1px;
+    border: 2px solid #d3d3d3;
+	border-radius:5px;
+}
+.italic{
+	margin-right:200px;
+	font-style: italic;
+	font-size: 24px;
+	color: #0EA0D6;
+}
+.share-n-sharebutton{
+	width:200px;
+	height:100px;
+}
+.share-n-sharebutton a{
+	text-decoration: none !important;
+}
+.model-dialog{
+	width: 25%;
+}
+input[type="button"]{
+    display: inline-block;
+    padding: 19px 8px;
+    color: white;
+    text-shadow: 0 1px black;
+    cursor: pointer;
+    border: 1px solid #00BE1C;
+    width: 37%;
+    font-size: 24px;
+    background: #00BE1B;
+    border-radius: 7px;
+}
+input[type="text"]{
+height:59px;
+width:150px;
+border-radius:5px;
+font-size:1.4em;
+border:2px solid #d3d3d3;
+}
+.butt{
+	height:100px;	
+	width:100px;
+	float:left;
+	margin-left:5px;
+	border-radius:5px;
+}
+.butt1{
+	margin-left:350px;
+	margin-top:-117px;
+}
+ progress[value] {
+  width: 500px;
+  height: 20px;
+}
+progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+   appearance: none;
+   width:100%;
+   height: 20px;
+}
+progress[value]::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+progress[value]::-webkit-progress-value {
+    background:orange;
+	border-radius: 2px; 
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+    #value{
+        margin-left: 25%;
+        
+    }
+</style>
+<body>
+	<div id="container">
+	<div class="outer-container container-fluid">
+		<div class="col-md-10">
+			<div class="contentbody container">
+				<div class="row bodyhead ">
+					<h3 id="value">$1000 still needed for this project</h3>
+					<div class="arrow-down"></div>
+				</div>
+				<div class="row donationcontent">
+					<div class="progress">
+  						<progress value="0" max="1000" id="p1"></progress>
+					</div>
+					<div class="row">
+						<div class="donationbody">
+							<h3><span>Only 3 days left</span> to fund this project.</h3>								
+							<h3>
+								Join the <strong>42</strong> other donors who have already supported this project. Every dollar	helps.
+							</h3>
+							<input type="text" id="donateval" name="donation"  placeholder="$50"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="button" id="donate" name="give"  onclick="incr()" value="Give Now"/>
+							
+							<p class="italic">Why give $50?</p>							
+						</div>		
+					</div>
+				</div>
+				<div class="butt" style="margin-top:20px" >
+					<div class="col-md-5 share-n-sharebutton"  >
+						<button id="demo" type="button" class="donationbutton1" onclick="myfunc()" style="width:100%">
+						Save for later</button>
+					</div>
+					
+					<div class="col-md-5 share-n-sharebutton butt1">
+						<a href="https://www.facebook.com/dialog/feed?app_id=145634995501895&amp;display=popup&amp;caption=Yay, I Donated!&amp;name=Yay!I donated. &amp;link=http://www.loktra.com/&amp;redirect_uri=https://facebook.com"><p class="donationbutton1" >Tell your Friends</p> </a>
+					</div>
+				</div>
+		</div>
+        </div>
+		<script type="text/javascript"> 
+		function incr() { 
+		var y = 1000;
+		var x = parseInt(document.getElementById("donateval").value);
+            if(x>1000)
+                {
+                    document.getElementById("value").innerHTML = "Project Accomplished";
+                }
+            else{
+            document.getElementById("value").innerHTML ="$"+(y-x)+" still needed for this project";
+            }
+		var v1=parseInt(document.getElementById('p1').value);
+		var z = (v1+x);
+		console.log(z);
+            
+		 document.getElementsByTagName("progress")[0].setAttribute("value",z);
+		
+			
+		}
+		</script> 
+		
+</body>
+</html>
