@@ -4,7 +4,8 @@
         <title>Movie List</title>
         <script type="text/javascript" src="angular.js"></script>
         <script type="text/javascript" src="js/script.js"></script>
-		<script src="https://cdn.jsdelivr.net/ngstorage/0.3.6/ngStorage.min.js"></script>
+		<script type="text/javascript" src="js/ngStorage.min.js"></script>
+		<!--<script src="https://cdn.jsdelivr.net/ngstorage/0.3.6/ngStorage.min.js"></script>-->
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/style.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,11 +31,11 @@
              
 			
         <center>
-        <div class="wishlist">
+			<div class="wishlist">
                 <h3>&#9825;Movie Wishlist&#9825;</h3><hr/>
-                {{details.Title}}
-            
-            
+				<div ng-repeat="wishList in wishlistToDispaly">
+                    {{ wishList.Title }}, Year {{ wishList.Year }}
+                </div>
             </div>
         </center> 
     </body>
