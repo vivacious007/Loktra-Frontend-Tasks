@@ -1,0 +1,32 @@
+<!Doctype Html>
+<html>
+	<head>
+		<style>
+			.profile-image{
+			position: relative;}
+			.profile-image img {
+			width: 248px;
+			height: 248px;
+			display: block;
+			}
+	.image_hover_bg{
+	background: url("g.jpg") no-repeat scroll center center rgba(0, 0, 0, 0);
+	height: 171px;
+	position: absolute;
+	top: 0;
+	width: 100px;
+	z-index: 1;
+	display:none;	
+		}
+		.profile-image:hover .image_hover_bg{display:block}
+	</head>
+		</style>
+	<body>
+		
+		<div class="profile-image">
+		<a href="#"><img src="donation.png" /></a>
+		<div class="image_hover_bg"></div>
+
+
+	</body>
+</html>
